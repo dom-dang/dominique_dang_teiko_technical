@@ -85,6 +85,7 @@ This executes the following steps sequentially:
    * summarizes samples by project
    * summarizes subjects by response
    * summarizes subjects by sex
+   * calculates the average B-cell count for melanoma male responders at baseline across all sample and treatment types
 
 ## Run the Dashboard
 
