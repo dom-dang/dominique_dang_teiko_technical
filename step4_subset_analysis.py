@@ -88,6 +88,25 @@ def summarize_by_sex(baseline):
         .reset_index(name="subject_count")
     )
 
+def get_average_b_cells_melanoma_male_responders_baseline(connection):
+    """ 
+    For the Google Form Question 
+    """
+    query = """
+    SELECT AVG(c.count) AS average_b_cells
+    FROM samples AS s
+    JOIN cell_counts AS c
+        ON s.sample = c.sample
+    JOIN populations AS p
+        ON c.population_id = p.population_id
+    WHERE LOWER(s.condition) = 'melanoma'
+      AND LOWER(s.sex) IN ('m', 'male')
+      AND LOWER(s.response) = 'yes'
+      AND s.time_from_treatment_start = 0
+      AND p.population_name = 'b_cell';
+    """
+    return connection.execute(query).fetchone()[0]
+
 
 def main():
     connection = sqlite3.connect(DB_PATH)
