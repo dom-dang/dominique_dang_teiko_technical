@@ -146,7 +146,7 @@ def main():
 
         print()
         print(f"Average B cells in melanoma male responders:")
-        print(average_b_cells)
+        print(f"{average_b_cells:.2f}")
 
     finally:
         connection.close()
