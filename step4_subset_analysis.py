@@ -118,6 +118,8 @@ def main():
         response_summary = summarize_by_response(baseline)
         sex_summary = summarize_by_sex(baseline)
 
+        average_b_cells = get_average_b_cells_melanoma_male_responders_baseline(connection)
+
         baseline.to_csv(BASELINE_OUTPUT_PATH, index=False)
         project_summary.to_csv(PROJECT_OUTPUT_PATH, index=False)
         response_summary.to_csv(RESPONSE_OUTPUT_PATH, index=False)
@@ -141,6 +143,10 @@ def main():
         print()
         print("Subjects by sex:")
         print(sex_summary)
+
+        print()
+        print(f"Average B cells in melanoma male responders:")
+        print(average_b_cells)
 
     finally:
         connection.close()

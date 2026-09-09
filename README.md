@@ -257,7 +257,7 @@ adjusted p-value ≈ 0.0621
 
 Therefore, no immune-cell population remained statistically significant at an FDR threshold of 0.05.
 
-This means the observed CD4 T-cell difference may be suggestive, but the current analysis does not provide sufficient evidence to conclude that any of the five populations independently predicts miraclib response.
+The current analysis does not provide sufficient evidence that any of the five populations differs significantly between miraclib responders and non-responders after multiple-testing correction.
 
 Outputs include:
 
@@ -305,6 +305,15 @@ Non-responders: 325
 ```text
 Female: 312
 Male: 344
+```
+
+## Average B-cell Count for Baseline Melanoma Male Responders 
+
+Considering melanoma male responders at `time_from_treatment_start = 0`
+across all sample types and treatments, the average B-cell count is:
+
+```text
+10206.15
 ```
 
 Outputs include:
