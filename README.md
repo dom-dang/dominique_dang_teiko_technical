@@ -17,7 +17,7 @@ The workflow covers:
 .
 ├── cell-count.csv
 ├── cell_counts.db
-├── step1_load_data.py
+├── load_data.py
 ├── step2_analyze.py
 ├── step3_compare_response.py
 ├── step4_subset_analysis.py
@@ -58,7 +58,7 @@ make pipeline
 
 This executes the following steps sequentially:
 
-1. `step1_load_data.py`
+1. `load_data.py`
 
    * creates the SQLite database
    * creates the database schema
